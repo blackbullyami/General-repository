@@ -16,6 +16,5 @@ public class class1 {
         long x=s.nextLong();
         System.out.println("your factorial of x is:"+" "+facrec(x));
     }
-    
-    
+
 }
