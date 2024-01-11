@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 // calculating factorial using recursive approach 
 
 public class class1 {
