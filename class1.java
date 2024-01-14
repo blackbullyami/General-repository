@@ -24,7 +24,7 @@
 //between 2000 and 3200 (both included).
 //The numbers obtained should be printed in a comma-separated sequence on a single line.
 
-public class class1{
+/*public class class1{
     public static void main(String args[]){
         ArrayList <Integer> t=new ArrayList<Integer>();
         for (int i=2001;i<3200;i++){
@@ -36,5 +36,35 @@ public class class1{
         for (int x:t){
             System.out.print(x+",");
         }
+    }
+}*/
+
+//Question:
+//Define a class which has at least two methods:
+//getString: to get a string from console input
+//printString: to print the string in upper case.
+//Also please include simple test function to test the class methods.
+
+class Two_methods{
+    public String getString(String n){
+        return n;
+
+    }
+    public void printString(String n){
+        String u=n.toUpperCase();
+        System.out.println(u);
+    }
+}
+public class class1{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your String");
+        String n=sc.nextLine();
+        Two_methods object=new Two_methods();
+        System.out.println(object.getString(n));
+        object.printString(n);
+
+
+
     }
 }
