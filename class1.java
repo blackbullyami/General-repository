@@ -151,3 +151,38 @@ Then, the output of the program should be:
 
     }
 }*/
+
+/*Question:
+Write a program that accepts a comma separated sequence of words as input and prints 
+the words in a comma-separated sequence after sorting them alphabetically.
+Suppose the following input is supplied to the program:
+without,hello,bag,world
+Then, the output should be:
+bag,hello,without,world*/
+/*public class java_question{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        sc.close();
+        ArrayList<String> arr=new ArrayList<String>();
+        String[] str1=str.split(",");
+
+        int s=str1.length;
+        for (String x:str1){
+            arr.add(x);
+        }
+        for (int i=0;i<s-1;i++){
+            for (int j=0;j<s-i-1;j++){ 
+                if ((arr.get(j).compareTo(arr.get(j+1)))>0){
+                    String string1=arr.get(j);
+                    arr.set(j,arr.get(j+1));
+                    arr.set(j+1,string1);
+                    
+                }
+            }
+    }
+        for(String x1:arr){
+            System.out.print(x1+",");
+        }
+}
+}*/
