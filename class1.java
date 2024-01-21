@@ -1,5 +1,6 @@
  import java.util.Scanner;
  import java.util.ArrayList;
+ import java.util.LinkedList;
 // calculating factorial using recursive approach 
 
 /*public class class1 {
@@ -186,3 +187,51 @@ bag,hello,without,world*/
         }
 }
 }*/
+
+/*Question:
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Suppose the following input is supplied to the program:
+hello world and practice makes perfect and hello world again
+Then, the output should be:
+again and hello makes perfect practice world*/
+
+public class class1{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        sc.close();
+        String[] str1=str.split(" ");
+        LinkedList<String> arr=new LinkedList<String>();
+        for (String x:str1){
+            arr.add(x);
+
+        }
+        int x1=str1.length; 
+        for(int i1=0;i1<x1-1;i1++){
+            for (int j1=i1+1;j1<x1;j1++){
+            if(arr.get(i1).equals(arr.get(j1))){
+                arr.remove(j1);
+                x1--;
+                j1--;
+                
+            }
+            }
+        }
+        
+
+        for (int i=0;i<x1-1;i++){
+            for (int j=0;j<x1-i-1;j++){
+                if (arr.get(j).compareTo(arr.get(j+1))>0){
+                String char1=arr.get(j);
+                arr.set(j,arr.get(j+1));
+                arr.set(j+1,char1);
+
+            }
+            }
+        }    
+        System.out.println(arr);  
+        
+
+
+    }
+}
